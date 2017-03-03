@@ -1,0 +1,631 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+
+
+
+@font-face {
+    font-family: 'nymphetteregular';
+    src:url('../fonts/nymphette-webfont.woff'), url('../fonts/nymphette-webfont.woff2');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+
+@font-face {
+    font-family: 'altairbold';
+    src: url('../fonts/altair-bold-webfont.woff2') format('woff2'),
+         url('../fonts/altair-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+.animopacity
+{
+	
+animation: opacity 2s linear;	
+	
+}
+
+@keyframes opacity {
+	
+	0%{opacity: 0;}
+	100%{opacity: 1}
+	
+	
+}
+
+
+.dingbat
+{
+	
+font-family: 'nymphetteregular';
+font-size: 4em;	
+	
+}
+
+.hidden
+{
+
+display: none;
+
+}
+
+a:active, a:visited
+{
+	
+color: #624e47;	
+	
+}
+
+ul
+{
+	
+list-style-type: none;	
+	
+}
+
+ul li a
+{
+
+color: #f2eee9;	
+	
+}
+
+
+ul li a:hover, ul li a:active, ul li a:visited  
+{
+	
+color: #f2eee9;	
+	
+	
+}
+
+ul li a:hover
+{
+	
+color: #f2eee9;	
+	
+	
+}
+
+a
+{
+	
+color: #906d61;		
+	
+	
+}
+
+a:hover
+{
+	
+color: #906d61;		
+	
+	
+}
+
+body
+{
+
+color: #150a06;	
+background-image:url(../images/cork-wallet.png);
+font-family: calibri;
+font-size: 1.1em;
+	
+}
+
+figure
+{
+	width: 15%;
+}
+
+section:not(.nosideborder)
+{
+
+border-left: 0.033em #cacaca solid;	
+border-right: 0.033em #cacaca solid;	
+	
+}
+
+.border
+{
+	
+border-top: 0.033em #150a06 solid;
+margin-top: 3%;
+padding-top: 1%;	
+	
+}
+
+.brown
+{
+	
+background-color: #150a06;
+color: #f2eee9;	
+	
+}
+
+
+.black
+{
+	
+background-color: #000000;
+color: #f2eee9;	
+	
+}
+
+.top-bar ul 
+{
+	
+background-color: #150a06;
+background: #150a06;
+	
+}
+
+.top-bar ul li
+{
+	
+display: list-item;	
+text-align: center;
+	
+}
+
+.title-bar
+{
+	
+background-color: #150a06;	
+	
+}
+
+.top-bar
+{
+	
+padding: 0rem;
+	
+}
+
+.white
+{
+	
+color: #ffffff;	
+	
+}
+
+.white:active, .white:visited
+{
+	
+color: #ffffff;	
+	
+}
+
+h1
+{
+font-size: 2em;	
+text-align: center;	
+}
+
+h1:not(#promotitle):not(.bigtitle)
+{
+
+margin-top: 5%;
+margin-bottom: 3%;		
+	
+}
+
+.small
+{
+
+font-size: 2.5em;	
+	
+}
+
+h1:not(.bigtitle)
+{	
+
+font-family: 'altairbold';
+}
+
+h2
+{
+
+font-size: 1.5em;	
+	
+}
+
+.bold
+{
+	
+font-weight: bold;	
+	
+	
+}
+
+.centered
+{
+	
+text-align: center;	
+	
+}
+
+.centered p
+{
+	
+text-align: center;	
+	
+}
+
+.wrapper
+{
+	
+overflow: hidden;	
+	
+}
+
+.menu li
+{
+	
+display: list-item;
+text-align: center;	
+	
+}
+
+#logo
+{
+	
+margin-top: 10%;
+margin-bottom: 5%;	
+	
+}
+
+img
+{
+	
+margin-top: 2%;
+margin-bottom: 2%;	
+	
+}
+
+#header
+{
+
+padding-bottom: 10%;	
+	
+}
+
+#promo
+{
+
+padding: 1%;
+margin-bottom: 2%;
+margin-top: 2%;	
+}
+
+footer
+{
+	
+margin-top: 2%;
+	
+}
+
+.copyright
+{
+
+margin-bottom: 0em;		
+	
+}
+
+#galbg
+{
+	
+background-color: #000000;	
+overflow: hidden;
+max-width: 68.125em;
+max-height: 26em;
+	
+}
+
+#galimg
+{
+	
+margin-top: 0em;
+margin-bottom: 0em;	
+	
+}
+
+#visa
+{
+
+margin-top: 6%;	
+	
+}
+
+.input-group-label
+{
+
+border: none;
+font-weight: bold;	
+	
+	
+}
+
+#donorcat
+{
+
+margin-top: 3%;	
+	
+}
+
+#submitbut
+{
+	
+padding: 2%;
+border: none;	
+	
+}
+
+.thumbnail
+{
+	
+padding: 0;	
+	
+}
+
+.arrow
+{
+
+padding: 0.9rem;	
+	
+}
+
+
+@media only screen and (min-width: 25em)and (max-width: 40em){
+
+#logo
+{
+
+margin-left: 20%;
+	
+}
+
+}
+
+@media only screen and (min-width: 40em){
+	
+.arrow
+{
+	
+border: none;
+box-shadow: none;	
+	
+}
+	
+#adminlink
+{
+
+font-size: 0.8em;	
+	
+}
+
+.narrowmargin
+{
+
+padding: 0em !important;	
+	
+}
+	
+h2
+{
+
+font-size: 1.2em;
+font-weight: bold;	
+	
+}
+	
+.arrow
+{
+	
+padding-top: 3%;	
+	
+}
+	
+#galimg
+{
+	
+width: 70%;
+margin-left: 6%;	
+	
+}
+
+#galoverlay
+{
+	
+background-color: rgba(0, 0, 0, 0.7);
+position: absolute;
+margin-top: 38.5%;
+width: 100%;
+padding: 2%;
+z-index: 2;	
+color: #ffffff;	
+font-size: 1.5em;
+	
+}
+
+#overlaycon
+{
+	
+position: relative;
+	
+}
+	
+#mapcon
+{
+	
+background-image: url(../images/mapconbg.jpg);	
+padding: 10%;
+margin-top: 12%;
+margin-bottom: 3%;
+	
+}
+
+#map
+{
+	
+margin-bottom: -16%;
+width: 70%;	
+	
+}
+
+
+.top-bar ul li
+{
+	
+display: inline-block;	
+	
+}	
+	
+.menu li
+{
+	
+display: inline-block;
+	
+}
+
+#header
+{
+		
+background-repeat: no-repeat;
+background-size: cover;
+padding-bottom: 20%;
+	
+}
+
+.mainheader
+{
+
+background:url(../images/mainheader.jpg);	
+	
+}
+
+.aboutheader
+{
+	
+background:url(../images/aboutheader.jpg);	
+	
+}
+
+.contactheader
+{
+	
+background:url(../images/contactheader.jpg);		
+	
+}
+
+.galleryheader
+{
+	
+background:url(../images/galleryheader.jpg);		
+	
+}
+
+.tourheader
+{
+	
+background:url(../images/tourheader.jpg);		
+	
+}
+
+#logo
+{
+	
+width: 20%;
+	
+}
+
+.bigtitle
+{
+	
+font-size: 3.5em;	
+text-shadow: 0.063em 0.063em 0.073em rgba(0, 0, 0, 0.46);
+	
+}
+
+ul li a:hover
+{
+	
+color: #906d61;	
+	
+	
+}
+
+a:hover
+{
+	
+color: #624e47;	
+	
+}
+
+.pull-up
+{
+	
+margin-top: -30%;	
+	
+}
+
+.changepadding
+{
+	
+padding-bottom: 10% !important;	
+	
+	
+}
+	
+	
+	
+}
+
+@media only screen and (min-width: 60em){
+	
+#map
+{
+	
+width: 50%;		
+		
+}
+
+.narrowmargin
+{
+
+padding: 1em !important;	
+	
+}
+	
+	
+}
+
+@media only screen and (min-width: 64.250em){
+	
+.largefix
+{
+	
+margin-top: -20%;	
+	
+}
+	
+}
+
+@media only screen and (min-width: 70em){
+
+.facebook
+{
+
+margin-left: 22%;	
+	
+}
+
+}
