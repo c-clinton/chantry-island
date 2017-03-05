@@ -330,7 +330,7 @@ max-height: 26em;
 	
 }
 
-#galimg
+.galimg
 {
 	
 margin-top: 0em;
@@ -373,6 +373,9 @@ border: none;
 {
 	
 padding: 0;	
+width: 75px;
+height: 75px;
+margin-right: 12px;
 	
 }
 
@@ -434,9 +437,8 @@ padding-top: 3%;
 	
 }
 	
-#galimg
+.galimg
 {
-	
 width: 70%;
 margin-left: 6%;	
 	
@@ -447,7 +449,7 @@ margin-left: 6%;
 	
 background-color: rgba(0, 0, 0, 0.7);
 position: absolute;
-margin-top: 38.5%;
+margin-top: 35.5%;
 width: 100%;
 padding: 2%;
 z-index: 2;	
@@ -460,6 +462,85 @@ font-size: 1.5em;
 {
 	
 position: relative;
+	
+}
+
+#overlaybig
+{
+	
+position: relative;	
+	
+}
+
+#overlaybig *
+{
+
+background-color: #000000;		
+	
+}
+
+#overlayinner
+{
+	
+position: absolute;
+width: 2%;
+height: 200%;
+padding-top: 100%;
+padding-bottom: 100%;
+padding-left: 10%;
+padding-right: 10%;
+z-index: 4;
+overflow: hidden;
+	
+}
+
+#close
+{
+position: fixed;
+left: 0;
+top: 0;
+z-index: 5;		
+}
+
+#close a
+{
+
+color: #ffffff;	
+font-size: 1.5em;	
+	
+}
+
+.show
+{
+
+display: block;	
+	
+}
+
+#zoombut
+{
+
+position: absolute;
+right: 0;
+padding: 0.3em;	
+	
+}
+
+#overlayinner .galimg
+{
+
+position: fixed;
+top: 0;
+left: 0;
+width: auto;
+height: auto;	
+	
+}
+
+#overlayinner *
+{
+
+position: fixed;	
 	
 }
 	
