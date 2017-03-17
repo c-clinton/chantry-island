@@ -7,6 +7,9 @@
     <title>Chantry Island Early Build</title>
     <link rel="stylesheet" href="css/foundation.css">
     <link rel="stylesheet" href="css/app.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyALNcGXttZj_0EtbTCacAlHKN1L8xdf_Jo"></script>
+    
   </head>
   <body>
 
@@ -57,18 +60,38 @@
                     <h1>Directions</h1>
                     </div>
                     
-                    <div class="small-12">
-                    <div id="mapcon" class="medium-10 medium-push-1">
-                    <img id="map" class="small-12 medium-5 medium-pull-2" src="images/contact_map.jpg" alt="fake google map for reference">
-                    </div>
+                   <div class="row">
+                    <div class="stats show-for-small-only smasll-12 columns"><p>Click the MHS marker to view our full address, or enter your own address for directions.</p></div>
                     </div>
                     
-                    <div class="centered small-12 medium-10 medium-pull-1 column">
-                    <p>86 Saugeen St. <br> Southampton, Ontario Canada <br> N0H 2L0</p>
-                    <p>From Highway 21 in Southampton, turn west on Clarendon and follow the signs, or From High Street, (the main street), turn north on Huron or Grosvenor Street and look for the signs.</p>
-                    <a class="bold" href="#">View larger Map &#62;</a>
+                    <div class="map-wrapper small-12">
+                    <div id="mapcon" class="medium-10 medium-push-1 row">
+                    <h4 class="geocode-header show-for-medium hide-for-large">Where to Find Us</h4>
+                    <div class="preloadcon">
+                    <div class="preload-wrapper medium-5 medium-pull-2  columns">
+					<i class="fa fa-spinner fa-spin columns"></i><span>Loading map, please wait...</span>
+					</div>
                     </div>
-                    
+                     <div id="map" class="small-12 small-centered medium-5 medium-uncentered medium-pull-2 columns"></div> 
+                     
+                     <div id="mapcontrols" class="show-for-medium medium-7 medium-push-7">
+                    <h4 class="geocode-header show-for-large">Where to Find Us</h4>
+                    <input type="text" class="address medium-8">
+					<input class="mapbut geocode" id="geocode1" type="submit" value="Set&#13;&#10;Address">
+                     <input class="mapbut removeoverlay" type="button" value="Remove&#13;&#10;Overlay">
+      <input class="mapbut addoverlay" type="button" value="Add&#13;&#10;Overlay">
+      				<div class="stats" id="statslarge">Click the MHS marker to view our full address, or enter your own address for directions.</div>
+                    </div>
+                    </div>
+                    <div id="mapcontrolsmobile" class="small-centered text-center show-for-small-only">
+                    <input type="text" class="address small-12">
+                    <div class="row">
+                    <input class="mapbut geocode" id="geocode2" type="submit" value="Set&#13;&#10;Address">
+                     <input class="mapbut removeoverlay" type="button" value="Remove&#13;&#10;Overlay">
+      <input class="mapbut addoverlay" type="button" value="Add&#13;&#10;Overlay">
+      </div>
+                    </div>
+                    </div>
                     </section>
                     
                     <section class="row">
@@ -79,9 +102,6 @@
                     <div class="row">
                     <div class="column">
                     <form class="small-12 medium-7 medium-push-3 column">
-                    
-                    <!---omg after like 11 whole months of using foundation I finally found the class that makes the freakin' input labels line up with the fields. *weeps*-->
-                      
                       <div class="input-group">
                       <label class="input-group-label" for="to">To:</label>
                    	 <input class="input-group-field" id="to" name="to" type="text" value="" size="30" placeholder="admin@chantryisland.com"/>
@@ -223,5 +243,6 @@ Chantry Island and/or New Tour Boat </p>
     <script src="js/app.js"></script>
     <script src="js/TweenMax.min.js"></script>
     <script src="js/ScrollToPlugin.min.js"></script>
+    <script src="js/map.js"></script>
   </body>
 </html>
