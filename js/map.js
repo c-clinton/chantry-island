@@ -2,27 +2,11 @@
 
 (function() {
 
-var map = new google.maps.Map(document.querySelector('#map')), marker, preloader = document.querySelector('.preloadcon'), stats= document.querySelectorAll('.stats');
+var map = new google.maps.Map(document.querySelector('#map')), marker, preloader = document.querySelector('.preloadcon'), stats= document.querySelectorAll('.stats'), geocoder = new google.maps.Geocoder(), 
+//don't ask me why, but this function refused to work when I used querySelectorAll on the following variables. I tried both a for loop and a foreach; nada.
+geocode1 = document.querySelector('#geocode1'), geocode2 = document.querySelector('#geocode2'),
 
-///import the gocode API
-///
-var geocoder = new google.maps.Geocoder(),
-
-//don't ask me why, but neither a for loop not a foreach would allow me to run the same funtion from two separate buttons.
-geocode1 = document.querySelector('#geocode1'),
-geocode2 = document.querySelector('#geocode2'),
-
-//directions display
-directionsService = new google.maps.DirectionsService(),
-directionsDisplay,
-locations = [];
-
-var icon = 'images/marker.png';
-
-var imgOverlay;
-
-var addBut = document.querySelectorAll('.addoverlay');
-var rmvBut = document.querySelectorAll('.removeoverlay');
+directionsService = new google.maps.DirectionsService(), directionsDisplay, locations = [], icon = 'images/marker.png', imgOverlay, addBut = document.querySelectorAll('.addoverlay'), rmvBut = document.querySelectorAll('.removeoverlay');
 
 
 
@@ -34,19 +18,15 @@ function initMap(position){
           map: map,
 });
 
-	
 	directionsDisplay.setMap(map);
-	map.setCenter({ lat: 44.490723, lng: -81.404537,}); //passes dynamic variables through method NOTE: objects require commas, methods require semicolons
+	map.setCenter({ lat: 44.490723, lng: -81.404537,});
 	map.setZoom(20);
-
 	marker = new google.maps.Marker({
 	animation: google.maps.Animation.DROP,
 	position: {lat: 44.490723, lng: -81.404537,},
 	map: map,
 	icon: icon,
 	title: "Chantry Island",
-
-
 });
 
 
@@ -57,15 +37,13 @@ function initMap(position){
       '</div>'+
       '</div>';
 
-
  var infowindow = new google.maps.InfoWindow({
     content: contentString
   });
   
-   marker.addListener('click', function() {
+    marker.addListener('click', function() {
     infowindow.open(map, marker);
   });
-
 
   var imageBounds = {
           north: 44.490920, 
@@ -78,29 +56,26 @@ function initMap(position){
             'images/mapconoverlay.jpg',
             imageBounds);
         imgOverlay.setMap(map);
-
-
+		
 preloader.classList.add('hide-preloader');
 	
 }
 
 if(navigator.geolocation){
 
-navigator.geolocation.getCurrentPosition(initMap, handleError); //this function requirs a success callback and an error callback. The error callback runs when it fails.
+	navigator.geolocation.getCurrentPosition(initMap, handleError); 
 }else{
 
 	console.log("Failure to load.");
 }
 
-
 function handleError() {
 
-console.log("Something went wrong.");
+	console.log("Something went wrong.");
 
 }
 
-function codeAddress(){
-	
+function codeAddress(){	
 
 	var address = document.querySelector('.address').value;
 
@@ -154,13 +129,13 @@ var destination = new google.maps.LatLng(44.490723, -81.404537);
       avoidTolls: false
     });
 	
-directionsService.route(request, function(response, status) {
+	directionsService.route(request, function(response, status) {
 
-if(status == 'OK') {
+	if(status == 'OK') {
 
 	directionsDisplay.setDirections(response);
 	updateLocation(response);
-}
+	}
 });
 
 }
@@ -172,16 +147,13 @@ function updateLocation(response){
 	 stats[i].innerHTML = 'Estimated travel time: ' + point.duration.text + ' (' + point.distance.text + ')';
 	}
 	}
-
-
-
       function addOverlay() {
         imgOverlay.setMap(map);
       }
 
       function removeOverlay() {
         imgOverlay.setMap(null);
-      }
+}
 
 [].forEach.call(addBut, function(addBut) {addBut.addEventListener('click', addOverlay, false);});
 
